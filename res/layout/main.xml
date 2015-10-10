@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+  <LinearLayout android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+    <ProgressBar
+      android:id="@+id/progressBar"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:layout_width="match_parent"
+      android:layout_height="2dp"
+      android:max="100"/>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:text="Loading"
+              android:gravity="center"/>
+  </LinearLayout>
+  <LinearLayout android:id="@+id/info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+      <Button android:id="@+id/chooseCity"
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content"
+              android:text="@string/choose_city"
+              android:enabled="false"/>
+      <Button android:id="@+id/getWeather"
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content"
+              android:text="@string/get_weather"
+              android:enabled="false"/>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+      <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+        <TextView android:id="@+id/city"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+        <View android:background="@android:color/darker_gray"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginTop="2dp"
+              android:layout_marginBottom="2dp"/>
+        <LinearLayout android:id="@+id/result_layout"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:id="@+id/error_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                  android:text="Error"/>
+      </LinearLayout>
+    </RelativeLayout>
+  </LinearLayout>
+
+
+</RelativeLayout>
